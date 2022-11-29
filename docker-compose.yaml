@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  cat-api-front:
+    build: .
+    entrypoint: sh ./.docker/entrypoint.sh
+    container_name: cat-front
+    ports: 
+      - 8080:8080
+    tty: true
+    restart: always
+    networks: 
+      - api-cat
+    volumes: 
+        - .:/usr/cat-api-front/app
+
+networks:
+  api-cat:
