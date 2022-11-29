@@ -1,10 +1,12 @@
 <template>
-  <nav>
+  <nav class="pb-5">
     <navbar/>
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="">About</router-link> -->
   </nav>
-  <router-view/>
+  <div class="pe-5 ps-5">
+    <router-view/>
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'

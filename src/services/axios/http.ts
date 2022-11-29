@@ -4,7 +4,7 @@ import axios from 'axios';
 export const http = axios.create({
     baseURL: API_URL,
     headers: {
-        'accept': 'application/json',
-        'content': 'application/json'
+        'accept': '*',
+        'content': '*',
     },
 });
