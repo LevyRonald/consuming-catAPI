@@ -12,25 +12,17 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import CatsRequests from "@/services/axios/CatsRequests";
 
 export default defineComponent({
   data() {
     return {
       substring: "",
-      limit: 9,
-      page: 0,
-      breeds: {}
     };
   },
-  async mounted() {
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    await CatsRequests.getlAllBreeds({limit: this.limit, page: this.page}).then((result) => {
-      console.log(result.data);
-      this.breeds = result.data;
-      console.log(this.breeds);
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
-    });
-  },
+  props: {
+    breeds: {
+      type: Object,
+    }
+  }
 });
 </script>
