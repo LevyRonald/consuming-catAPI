@@ -13,13 +13,14 @@ export default defineComponent({
   data() {
     return {
       limit: 9,
-      page: 1,
-      rows: 67,
+      page: 0,
+      rows: 1,
       breeds: {},
     };
   },
   mounted() {
     this.handlePageChange()
+    this.getRows()
   },
   methods: {
      renderCats() {
@@ -32,9 +33,15 @@ export default defineComponent({
       });
     },
     handlePageChange() {
-      this.page + 1;
+      this.page;
       this.renderCats();
     },
+    getRows() {
+        CatsRequests.getlAllBreeds().then((result) => {
+            this.rows = result.data.length
+            console.log(result);
+        })
+    }
   },
 });
 </script>
