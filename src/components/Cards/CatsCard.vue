@@ -5,7 +5,7 @@
         <div></div>
         <b-badge variant="info">{{ breed['origin'] }}</b-badge>
         <h4>{{ breed['name'] }}</h4>
-        <p>{{ breed['description'].substring(0, 200) + '...'}}</p>
+        <p>{{ breed['description'].substring(0, 120) + '...'}}</p>
       </b-card>
     </b-col>
   </b-row>
@@ -18,12 +18,14 @@ export default defineComponent({
   data() {
     return {
       substring: "",
+      limit: 9,
+      page: 0,
       breeds: {}
     };
   },
   async mounted() {
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    await CatsRequests.getlAllBreeds().then((result) => {
+    await CatsRequests.getlAllBreeds({limit: this.limit, page: this.page}).then((result) => {
       console.log(result.data);
       this.breeds = result.data;
       console.log(this.breeds);

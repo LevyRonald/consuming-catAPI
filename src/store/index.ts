@@ -13,8 +13,8 @@ export default createStore({
     }
   },
   actions: {
-    async getlAllBreeds({ commit }) {
-      await CatsRequests.getlAllBreeds().then((res) => {
+    async getlAllBreeds({ commit }: any, data?: object) {
+      await CatsRequests.getlAllBreeds(data).then((res) => {
         commit('ALL_BREEDS', res.data)
         console.log(res);
       })
