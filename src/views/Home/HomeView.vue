@@ -1,6 +1,8 @@
 <template>
   <cats-card :breeds="breeds" />
-  <pagination v-model="page" :page="limit" :rows="rows" @click="handlePageChange" />
+  <div class="w-100 d-flex justify-content-end">
+    <pagination v-model="page" :page="limit" :rows="rows" @click="handlePageChange" />
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
