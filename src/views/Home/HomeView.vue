@@ -1,13 +1,15 @@
 <template>
   <cats-card :breeds="breeds" />
+  <pagination />
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import CatsCard from "@/components/Cards/CatsCard.vue";
+import Pagination from '@/components/Pagination/PaginationApp.vue'
 import CatsRequests from "@/services/axios/CatsRequests";
 
 export default defineComponent({
-  components: { CatsCard },
+  components: { CatsCard, Pagination },
   data() {
     return {
       limit: 9,
