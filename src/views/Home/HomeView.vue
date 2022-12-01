@@ -23,12 +23,6 @@ export default defineComponent({
   components: { CatsCard, Pagination, SelectApp },
   data() {
     return {
-      teste: [{}],
-      selectBreeds:[
-        {
-          breeds: "",
-          id: "",
-        }],
       nameBreeds: [
         {
           name: "",
@@ -63,12 +57,6 @@ export default defineComponent({
         this.rows = result.data.length;
         this.nameBreeds = result.data;
       });
-      // for (let index = 0; index < this.rows; index++) {
-      //   this.selectBreeds[index].breeds = this.nameBreeds[index].name;
-      //   this.selectBreeds[index].id = this.nameBreeds[index].id;
-      //   // console.log(this.teste);
-      //   console.log(this.nameBreeds);
-      // }
     },
   },
 });

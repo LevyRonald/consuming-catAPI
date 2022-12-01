@@ -7,7 +7,6 @@
     </template>
   </b-form-select>
 </template>
-
 <script lang="ts">
 import { defineComponent } from "vue";
 import { ref } from "vue";
@@ -29,13 +28,7 @@ export default defineComponent({
         CatsRequests.getOneBreed(this.exGroupSelected)
         this.exGroupSelected = null
       }
-    },   
-    teste() {
-      if(this.exGroupSelected != null) {
-        console.log(this.exGroupSelected);
-        this.exGroupSelected = null
-      }
-    }
+    },
   }
 });
 </script>
