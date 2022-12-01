@@ -10,7 +10,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { ref } from "vue";
-import CatsRequests from "@/services/axios/CatsRequests";
 
 export default defineComponent({
   data() {
@@ -89,8 +88,6 @@ export default defineComponent({
   methods: {
     async searchBreed() {
       if(this.exGroupSelected != null) {
-        CatsRequests.getOneBreed(this.exGroupSelected)
-        console.log(this.exGroupSelected);
         this.$router.push({path: `/${this.exGroupSelected}`})
         this.exGroupSelected = null
       }
