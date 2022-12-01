@@ -87,9 +87,11 @@ export default defineComponent({
     };
   },
   methods: {
-    searchBreed() {
+    async searchBreed() {
       if(this.exGroupSelected != null) {
         CatsRequests.getOneBreed(this.exGroupSelected)
+        console.log(this.exGroupSelected);
+        this.$router.push({path: `/breed/${this.exGroupSelected}`})
         this.exGroupSelected = null
       }
     },
