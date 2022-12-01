@@ -1,5 +1,5 @@
 <template>
-  <nav class="pb-5">
+  <nav class="pb-4">
     <navbar/>
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="">About</router-link> -->

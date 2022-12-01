@@ -1,5 +1,7 @@
 <template>
-  <select-app :NameBreeds="selectBreeds" />
+  <div class="mb-2 d-flex justify-content-end">
+    <select-app class="w-25" />
+  </div>
   <cats-card :breeds="breeds" />
   <div class="w-100 d-flex justify-content-end">
     <pagination
@@ -15,17 +17,23 @@ import { defineComponent } from "vue";
 import CatsCard from "@/components/Cards/CatsCard.vue";
 import Pagination from "@/components/Pagination/PaginationApp.vue";
 import CatsRequests from "@/services/axios/CatsRequests";
-import SelectApp from "@/components/Select/SelectApp.vue"
+import SelectApp from "@/components/Select/SelectApp.vue";
 
 export default defineComponent({
   components: { CatsCard, Pagination, SelectApp },
   data() {
     return {
-      selectBreeds: [''],
+      teste: [{}],
+      selectBreeds:[
+        {
+          breeds: "",
+          id: "",
+        }],
       nameBreeds: [
         {
-            name: ''
-        }
+          name: "",
+          id: "",
+        },
       ],
       limit: 9,
       page: 0,
@@ -34,11 +42,11 @@ export default defineComponent({
     };
   },
   mounted() {
-    this.handlePageChange()
-    this.getRows()
+    this.handlePageChange();
+    this.getRows();
   },
   methods: {
-     renderCats() {
+    renderCats() {
       CatsRequests.getlAllBreeds({
         limit: this.limit,
         page: this.page,
@@ -51,14 +59,17 @@ export default defineComponent({
       this.renderCats();
     },
     async getRows() {
-        await CatsRequests.getlAllBreeds().then((result) => {
-            this.rows = result.data.length
-            this.nameBreeds = result.data
-        })
-        for(let index = 0; index < this.rows; index++) {
-            this.selectBreeds.push(this.nameBreeds?.[index].name)
-        }
-    }
+      await CatsRequests.getlAllBreeds().then((result) => {
+        this.rows = result.data.length;
+        this.nameBreeds = result.data;
+      });
+      // for (let index = 0; index < this.rows; index++) {
+      //   this.selectBreeds[index].breeds = this.nameBreeds[index].name;
+      //   this.selectBreeds[index].id = this.nameBreeds[index].id;
+      //   // console.log(this.teste);
+      //   console.log(this.nameBreeds);
+      // }
+    },
   },
 });
 </script>

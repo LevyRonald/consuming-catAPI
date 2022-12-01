@@ -16,7 +16,6 @@ export default createStore({
     async getlAllBreeds({ commit }: any, data?: object) {
       await CatsRequests.getlAllBreeds(data).then((res) => {
         commit('ALL_BREEDS', res.data)
-        console.log(res);
       })
     }
   },
