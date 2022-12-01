@@ -1,6 +1,6 @@
 <template>
-    <div class="d-flex justify-content-center">
-        <b-card class="card-breed">{{currentBreed}}</b-card>
+    <div>
+        <b-card>{{currentBreed}}</b-card>
     </div>
 </template>
 <script lang="ts">

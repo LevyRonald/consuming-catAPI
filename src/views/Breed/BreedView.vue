@@ -1,5 +1,7 @@
 <template>
-  <cat-breed-card :current-breed="breed"/>
+    <div class="d-flex justify-content-center">
+        <cat-breed-card class="card-breed" :current-breed="breed"/>
+    </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
