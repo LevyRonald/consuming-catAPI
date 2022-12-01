@@ -91,7 +91,7 @@ export default defineComponent({
       if(this.exGroupSelected != null) {
         CatsRequests.getOneBreed(this.exGroupSelected)
         console.log(this.exGroupSelected);
-        this.$router.push({path: `/breed/${this.exGroupSelected}`})
+        this.$router.push({path: `/${this.exGroupSelected}`})
         this.exGroupSelected = null
       }
     },
