@@ -1,5 +1,5 @@
 <template>
-  <b-form-select v-model="exGroupSelected" :options="ex1GroupOptions" @click="teste">
+  <b-form-select v-model="exGroupSelected" :options="ex1GroupOptions" @click="searchBreed">
     <template #first>
       <b-form-select-option :value="null" disabled
         >-- Please select an option --</b-form-select-option
@@ -11,6 +11,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import CatsRequests from "@/services/axios/CatsRequests";
 
 export default defineComponent({
   data() {
@@ -23,6 +24,12 @@ export default defineComponent({
     };
   },
   methods: {
+    searchBreed() {
+      if(this.exGroupSelected != null) {
+        CatsRequests.getOneBreed(this.exGroupSelected)
+        this.exGroupSelected = null
+      }
+    },   
     teste() {
       if(this.exGroupSelected != null) {
         console.log(this.exGroupSelected);
