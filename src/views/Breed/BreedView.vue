@@ -20,9 +20,11 @@ export default defineComponent({
   },
   methods: {
     getCurrentBreed() {
-      const breedRoute = this.$router.currentRoute.value.params.name;
+      let breedRoute: string | string[] 
+      breedRoute = this.$router.currentRoute.value.params.name;
       CatsRequests.getOneBreed(breedRoute).then((result) => {
         this.breed = result.data;
+        console.log(this.breed);
       });
     },
   },

@@ -27,7 +27,7 @@ export default createStore({
         console.log(res);
         commit('ONE_BREED', res.data)
       })
-    }
+    },
   },
   modules: {
   }
