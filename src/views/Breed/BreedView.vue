@@ -24,7 +24,6 @@ export default defineComponent({
       breedRoute = this.$router.currentRoute.value.params.name;
       CatsRequests.getOneBreed(breedRoute).then((result) => {
         this.breed = result.data;
-        console.log(this.breed);
       });
     },
   },
