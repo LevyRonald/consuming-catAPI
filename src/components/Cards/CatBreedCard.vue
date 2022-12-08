@@ -1,8 +1,8 @@
 <template>
   <div>
     <b-card>
-      <div>
-        <carousel-app :images-breed="imagesBreed[1]" />
+      <div v-if="imagesBreed.length > 0">
+        <carousel-app :images-breed="imagesBreed" />
       </div>
     </b-card>
   </div>
@@ -16,10 +16,12 @@ export default defineComponent({
   data() {
     return {
       limit: 10,
-      imagesBreed: [Object]
+      imagesBreed: [],
     };
   },
-  components: { CarouselApp },
+  components: {
+    CarouselApp,
+  },
   props: {
     currentBreed: {
       type: Object,
@@ -36,7 +38,8 @@ export default defineComponent({
         breed_id: breedRoute,
         limit: this.limit,
       }).then((result) => {
-        this.imagesBreed.push(result.data)
+        this.imagesBreed = result.data;
+        console.log(this.imagesBreed);
       });
     },
   },

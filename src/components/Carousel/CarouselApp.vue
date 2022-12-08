@@ -1,27 +1,39 @@
 <template>
-    <b-carousel
-    :interval="5000"
-    controls
-    indicators
-    background="#ababab"
-    img-width="1024"
-    img-height="280"
-    style="text-shadow: 1px 1px 2px #333"
-    class="carousel-dark carousel-fade"
-    >
-      <b-carousel-slide active img-src="https://picsum.photos/1024/480/?image=20" />
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=21" />
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=22" />
-  </b-carousel>
+  <Carousel
+    :items-to-show="2"
+    :items-to-scroll="1"
+    :wrapAround="true"
+    :autoplay="2000"
+    snapAlign="start"
+  >
+    <Slide v-for="slide in imagesBreed" :key="slide.id">
+      <div class="carousel__item">
+        <b-img class="imageBreed" :src="slide.url" fluid />
+      </div>
+    </Slide>
+
+    <template #addons>
+      <Navigation />
+      <Pagination />
+    </template>
+  </Carousel>
 </template>
+
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
+import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 
 export default defineComponent({
-    props: {
-        imageCat: {
-            type: String
-        }
-    }
-})
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+  props: {
+    imagesBreed: {
+      type: Array,
+    },
+  },
+});
 </script>
