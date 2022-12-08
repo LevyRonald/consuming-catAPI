@@ -3,12 +3,12 @@
     :items-to-show="2"
     :items-to-scroll="1"
     :wrapAround="true"
-    :autoplay="2000"
+    :autoplay="3000"
     snapAlign="start"
   >
     <Slide v-for="slide in imagesBreed" :key="slide.id">
       <div class="carousel__item">
-        <b-img class="imageBreed" :src="slide.url" fluid />
+        <b-img class="imageBreed" :src="slide.url" fluid rounded />
       </div>
     </Slide>
 
