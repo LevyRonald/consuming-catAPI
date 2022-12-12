@@ -1,8 +1,14 @@
 <template>
-  <div>
+  <div v-if="currentBreed != undefined">
     <b-card>
       <div v-if="imagesBreed.length > 0">
         <carousel-app :images-breed="imagesBreed" />
+        <div class="pt-2">
+          <h5>
+            <b-badge href="#" pill variant="primary">{{ currentBreed.origin }}</b-badge>
+            <b-badge href="#" pill variant="primary">{{currentBreed.life_span}}</b-badge>
+          </h5>
+        </div>
       </div>
     </b-card>
   </div>
