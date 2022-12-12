@@ -1,6 +1,6 @@
 <template>
   <Carousel
-    :items-to-show="2"
+    :items-to-show="1"
     :items-to-scroll="1"
     :wrapAround="true"
     :autoplay="3000"
