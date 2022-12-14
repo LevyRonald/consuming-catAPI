@@ -4,10 +4,23 @@
       <div v-if="imagesBreed.length > 0">
         <carousel-app :images-breed="imagesBreed" />
         <div class="pt-2">
-          <h5>
-            <b-badge href="#" pill variant="primary">{{ currentBreed.origin }}</b-badge>
-            <b-badge href="#" pill variant="primary">{{currentBreed.life_span}}</b-badge>
-          </h5>
+          <div class="badges d-flex justify-content-center">
+            <h5 class="">
+              <b-badge href="#" pill variant="primary">{{
+                currentBreed.origin
+              }}</b-badge>
+            </h5>
+            <h5>
+              <b-badge href="#" pill variant="primary">
+                Life Span: {{ currentBreed.life_span }}</b-badge
+              >
+            </h5>
+            <h5>
+              <b-badge href="#" pill variant="primary"
+                >Weigth: {{ currentBreed.weight.metric }}</b-badge
+              >
+            </h5>
+          </div>
         </div>
       </div>
     </b-card>
