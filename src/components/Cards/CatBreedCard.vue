@@ -5,21 +5,29 @@
         <carousel-app :images-breed="imagesBreed" />
         <div class="pt-2">
           <div class="badges d-flex justify-content-center">
-            <h5 class="">
+            <h5>
               <b-badge href="#" pill variant="primary">{{
                 currentBreed.origin
               }}</b-badge>
             </h5>
             <h5>
-              <b-badge href="#" pill variant="primary">
-                Life Span: {{ currentBreed.life_span }}</b-badge
+              <b-badge href="#" pill variant="primary"
+                >Life Span {{ currentBreed.life_span }}</b-badge
               >
             </h5>
             <h5>
-              <b-badge href="#" pill variant="primary"
-                >Weigth: {{ currentBreed.weight.metric }}</b-badge
-              >
+              <h5>
+                <b-badge href="#" pill variant="primary"
+                  >Weigth: {{ currentBreed.weight.metric }}</b-badge
+                >
+              </h5>
             </h5>
+          </div>
+          <div>
+            <h3>{{currentBreed.name}}</h3>
+            <p class="p-0 m-0">{{currentBreed.description}}</p>
+            --
+            <h6>{{currentBreed.temperament}}</h6>
           </div>
         </div>
       </div>
@@ -64,3 +72,18 @@ export default defineComponent({
   },
 });
 </script>
+<!-- <h5>
+  <b-badge href="#" pill variant="primary">{{
+    currentBreed.origin
+  }}</b-badge>
+</h5>
+<h5>
+  <b-badge href="#" pill variant="primary">
+    Life Span: {{ currentBreed.life_span }}</b-badge
+  >
+</h5>
+<h5>
+  <b-badge href="#" pill variant="primary"
+    >Weigth: {{ currentBreed.weight.metric }}</b-badge
+  >
+</h5> -->

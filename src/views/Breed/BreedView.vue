@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center pb-5">
         <cat-breed-card class="card-breed" :current-breed="breed"/>
     </div>
 </template>
