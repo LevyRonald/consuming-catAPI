@@ -1,15 +1,14 @@
-.container-fluid{
-    width: 100% !important;
-    .nav-items {
-        padding-right: 200%
-    }
+.navbar {
+    height: 60px;
 }
-.nav-link {
+
+.title {
+    padding-right: 10%;
     color: white;
-}
-.navbar-brand {
-    color: white;
+    cursor: pointer;
+
     &:hover {
-        color: white;
+        color: rgb(216, 216, 216);
+        transition: 0.2s;
     }
 }
