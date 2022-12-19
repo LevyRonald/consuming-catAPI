@@ -16,10 +16,23 @@
     </div>
     <div class="offcanvas-body">
       <div>
-        <p>Home</p>
-        <p>Favoritos</p>
+        <p class="actions" @click="redirect" data-bs-dismiss="offcanvas">
+          Home
+        </p>
+        <p class="actions">Favoritos</p>
       </div>
       <div class="dropdown mt-3"></div>
     </div>
   </div>
 </template>
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  methods: {
+    redirect() {
+      this.$router.push({ name: "home" });
+    },
+  },
+});
+</script>

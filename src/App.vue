@@ -1,8 +1,6 @@
 <template>
   <nav class="pb-4">
     <navbar/>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/breed">About</router-link>
   </nav>
   <div class="pe-5 ps-5">
     <router-view/>
