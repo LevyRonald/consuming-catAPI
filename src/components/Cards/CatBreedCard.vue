@@ -24,10 +24,24 @@
             </h5>
           </div>
           <div>
-            <h3>{{currentBreed.name}}</h3>
-            <p class="p-0 m-0">{{currentBreed.description}}</p>
+            <h3>{{ currentBreed.name }}</h3>
+            <p class="p-0 m-0">{{ currentBreed.description }}</p>
             --
-            <h6>{{currentBreed.temperament}}</h6>
+            <h6>{{ currentBreed.temperament }}</h6>
+          </div>
+          <div class="d-flex w-100 flex-column">
+            <div class="d-flex pb-1 flex-column">
+              <span>Adaptability:</span>
+              <RatingStarVue class="d-flex" :rating-raw-value="currentBreed.adaptability" />
+            </div>
+            <div class="d-flex flex-column">
+              <span>Affection:</span>
+              <RatingStarVue class="d-flex" :rating-raw-value="currentBreed.affection_level" />
+            </div>
+            <div class="d-flex flex-column">
+              <span>child friendly:</span>
+              <RatingStarVue class="d-flex" :rating-raw-value="currentBreed.child_friendly" />
+            </div>
           </div>
         </div>
       </div>
@@ -38,6 +52,7 @@
 import { defineComponent } from "vue";
 import CarouselApp from "@/components/Carousel/CarouselApp.vue";
 import CatsRequests from "@/services/axios/CatsRequests";
+import RatingStarVue from "../Rating/RatingStar.vue";
 
 export default defineComponent({
   data() {
@@ -48,6 +63,7 @@ export default defineComponent({
   },
   components: {
     CarouselApp,
+    RatingStarVue,
   },
   props: {
     currentBreed: {
