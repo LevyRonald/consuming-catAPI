@@ -23,26 +23,170 @@
               </h5>
             </h5>
           </div>
-          <div>
+          <div class="colorText">
             <h3 class="colorText">{{ currentBreed.name }}</h3>
             <p class="p-0 m-0 colorText">{{ currentBreed.description }}</p>
             --
             <h6 class="colorText">{{ currentBreed.temperament }}</h6>
           </div>
-          <div class="d-flex w-100 flex-column">
+          <b-container>
+            <b-row align-h="between">
+              <b-col cols="6">
+                <div class="d-flex pb-1 flex-column">
+                  <span class="colorText">Adaptability:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.adaptability"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Affection:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.affection_level"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">child friendly:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.child_friendly"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Dog friendly:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.dog_friendly"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Energy level:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.energy_level"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Grooming:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.grooming"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Health issues:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.health_issues"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Intelligence:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.intelligence"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Sheeding level:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.shedding_level"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Social needs:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.social_needs"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Stranger friendly:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.stranger_friendly"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Vocalisation:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.social_needs"
+                  />
+                </div>
+              </b-col>
+              <b-col cols="6">
+                <div class="d-flex flex-column">
+                  <span class="colorText">Experimental:</span>
+                  <RatingStarVue
+                    class="d-flex"
+                    :rating-raw-value="currentBreed.experimental"
+                  />
+                </div>
+              </b-col>
+            </b-row>
+          </b-container>
+          <!-- <div class="d-flex w-100 flex-column">
             <div class="d-flex pb-1 flex-column">
               <span class="colorText">Adaptability:</span>
-              <RatingStarVue class="d-flex" :rating-raw-value="currentBreed.adaptability" />
+              <RatingStarVue
+                class="d-flex"
+                :rating-raw-value="currentBreed.adaptability"
+              />
             </div>
             <div class="d-flex flex-column">
               <span class="colorText">Affection:</span>
-              <RatingStarVue class="d-flex" :rating-raw-value="currentBreed.affection_level" />
+              <RatingStarVue
+                class="d-flex"
+                :rating-raw-value="currentBreed.affection_level"
+              />
             </div>
             <div class="d-flex flex-column">
               <span class="colorText">child friendly:</span>
-              <RatingStarVue class="d-flex" :rating-raw-value="currentBreed.child_friendly" />
+              <RatingStarVue
+                class="d-flex"
+                :rating-raw-value="currentBreed.child_friendly"
+              />
             </div>
-          </div>
+            <div class="d-flex flex-column">
+              <span class="colorText">Dog friendly:</span>
+              <RatingStarVue
+                class="d-flex"
+                :rating-raw-value="currentBreed.dog_friendly"
+              />
+            </div>
+            <div class="d-flex flex-column">
+              <span class="colorText">Energy level:</span>
+              <RatingStarVue
+                class="d-flex"
+                :rating-raw-value="currentBreed.energy_level"
+              />
+            </div>
+          </div> -->
         </div>
       </div>
     </b-card>
