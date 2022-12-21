@@ -42,10 +42,10 @@ body{
 
 
 .area{
-    background: #4e54c8;  
+    background: #2D033B;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
-    height:209vh;
+    height:210vh;
     
    
 }

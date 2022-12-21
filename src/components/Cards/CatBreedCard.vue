@@ -1,6 +1,6 @@
 <template>
   <div v-if="currentBreed != undefined">
-    <b-card>
+    <b-card class="cardBreed">
       <div v-if="imagesBreed.length > 0">
         <carousel-app :images-breed="imagesBreed" />
         <div class="pt-2">
