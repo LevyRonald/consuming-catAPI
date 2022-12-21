@@ -24,22 +24,22 @@
             </h5>
           </div>
           <div>
-            <h3>{{ currentBreed.name }}</h3>
-            <p class="p-0 m-0">{{ currentBreed.description }}</p>
+            <h3 class="colorText">{{ currentBreed.name }}</h3>
+            <p class="p-0 m-0 colorText">{{ currentBreed.description }}</p>
             --
-            <h6>{{ currentBreed.temperament }}</h6>
+            <h6 class="colorText">{{ currentBreed.temperament }}</h6>
           </div>
           <div class="d-flex w-100 flex-column">
             <div class="d-flex pb-1 flex-column">
-              <span>Adaptability:</span>
+              <span class="colorText">Adaptability:</span>
               <RatingStarVue class="d-flex" :rating-raw-value="currentBreed.adaptability" />
             </div>
             <div class="d-flex flex-column">
-              <span>Affection:</span>
+              <span class="colorText">Affection:</span>
               <RatingStarVue class="d-flex" :rating-raw-value="currentBreed.affection_level" />
             </div>
             <div class="d-flex flex-column">
-              <span>child friendly:</span>
+              <span class="colorText">child friendly:</span>
               <RatingStarVue class="d-flex" :rating-raw-value="currentBreed.child_friendly" />
             </div>
           </div>
