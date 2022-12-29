@@ -204,43 +204,6 @@
               </b-col>
             </b-row>
           </b-container>
-          <!-- <div class="d-flex w-100 flex-column">
-            <div class="d-flex pb-1 flex-column">
-              <span class="colorText">Adaptability:</span>
-              <RatingStarVue
-                class="d-flex"
-                :rating-raw-value="currentBreed.adaptability"
-              />
-            </div>
-            <div class="d-flex flex-column">
-              <span class="colorText">Affection:</span>
-              <RatingStarVue
-                class="d-flex"
-                :rating-raw-value="currentBreed.affection_level"
-              />
-            </div>
-            <div class="d-flex flex-column">
-              <span class="colorText">child friendly:</span>
-              <RatingStarVue
-                class="d-flex"
-                :rating-raw-value="currentBreed.child_friendly"
-              />
-            </div>
-            <div class="d-flex flex-column">
-              <span class="colorText">Dog friendly:</span>
-              <RatingStarVue
-                class="d-flex"
-                :rating-raw-value="currentBreed.dog_friendly"
-              />
-            </div>
-            <div class="d-flex flex-column">
-              <span class="colorText">Energy level:</span>
-              <RatingStarVue
-                class="d-flex"
-                :rating-raw-value="currentBreed.energy_level"
-              />
-            </div>
-          </div> -->
         </div>
       </div>
     </b-card>
